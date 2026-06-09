@@ -153,6 +153,11 @@
   <div class="arrow-down">
    <i class="fa-solid fa-cart-arrow-down" style="color: rgb(32, 33, 34);"></i>
   </div>
+  <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
  </section>
  <section class="first-section">
   <div class="section1-content">
@@ -197,7 +202,7 @@
     CAPTCHA
    </div>
 
-   <button  class="button" type="submit">Submit</button >
+<a class="button" href="Login.html"><strong>Submit</strong></a>
 
   </form>
  </section>
@@ -279,5 +284,20 @@
    <p><img src="./src/images/us-flag-small.png" alt="usflag" height="20px"> Designed and Made in California, USA</p>
   </div>
  </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const group = document.querySelector('.group');
+    const searchBar = document.querySelector('.search-bar');
+    
+    if (toggle && group && searchBar) {
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        group.classList.toggle('active');
+        searchBar.classList.toggle('active');
+      });
+    }
+  });
+</script>
 </body>
 </html>
